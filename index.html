@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <title>Pros4D — Modeling Evolving 4D Worlds in Latent Space</title>
+  <meta name="description" content="Pros4D unifies observed-dynamics understanding and future-dynamics prediction through evolving 4D latent states. Explore the method, Pros4D-Engine, and Pros4D-Bench.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pros4D — Understand motion. Reason beyond observation.">
+  <meta property="og:description" content="Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning.">
+  <meta property="og:image" content="https://pros4d.github.io/assets/social-preview.png">
+  <meta property="og:url" content="https://pros4d.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://pros4d.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning","url":"https://pros4d.github.io/","author":[{"@type":"Person","name":"Rongxin Gao"},{"@type":"Person","name":"Dongyuan Liu"},{"@type":"Person","name":"Chu Li"},{"@type":"Person","name":"Chengyang Ji"},{"@type":"Person","name":"Jialing Huang"},{"@type":"Person","name":"Chenxin Li"},{"@type":"Person","name":"Jingrui Ye"},{"@type":"Person","name":"Haosong Zhen"},{"@type":"Person","name":"Xinghao Ding"},{"@type":"Person","name":"Yue Huang"},{"@type":"Person","name":"Yuzhi Huang"},{"@type":"Person","name":"Xiaodong Tu"},{"@type":"Person","name":"Jingyan Jiang"}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="wordmark" href="#top" aria-label="Pros4D home"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 11 18 4l12 7v14l-12 7-12-7Z"/><path d="m6 11 12 7 12-7M18 18v14M12 7.5l12 7v14"/></svg>Pros<span>4D</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="#idea">Overview</a><a href="#method">Method</a><a href="#benchmark">Benchmark</a><a href="#results">Results</a>
+        <a class="nav-paper" href="downloads/Pros4D.pdf" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="eyebrow"><span class="status-dot"></span> DYNAMIC SPATIAL REASONING <span class="eyebrow-line"></span> RESEARCH PROJECT</div>
+      <div class="hero-brand">Pros<span>4D</span><span class="brand-period">.</span></div>
+      <h1>Modeling Evolving 4D Worlds<br class="desktop-break"> in Latent Space for<br class="desktop-break"> <span>Dynamic Spatial Reasoning</span></h1>
+      <p class="hero-summary">Understand what has happened.<br class="mobile-break"> Reason about what comes next.</p>
+      <div class="authors" aria-label="Paper authors">
+        <span>Rongxin Gao<sup>1</sup></span><span>Dongyuan Liu<sup>1</sup></span><span>Chu Li<sup>2</sup></span><span>Chengyang Ji<sup>2</sup></span><span>Jialing Huang<sup>1</sup></span><span>Chenxin Li<sup>3</sup></span><span>Jingrui Ye<sup>4</sup></span>
+        <span>Haosong Zhen<sup>5</sup></span><span>Xinghao Ding<sup>1</sup></span><span>Yue Huang<sup>1</sup></span><span>Yuzhi Huang<sup>4</sup></span><span>Xiaodong Tu<sup>1</sup></span><span>Jingyan Jiang<sup>6</sup></span>
+      </div>
+      <div class="affiliations"><span><sup>1</sup> Xiamen University</span><span><sup>2</sup> China University of Mining and Technology</span><span><sup>3</sup> The Chinese University of Hong Kong</span><span><sup>4,6</sup> Tsinghua University</span><span><sup>5</sup> Harbin Institute of Technology</span></div>
+      <div class="hero-actions"><a class="button primary" href="downloads/Pros4D.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2h7l4 4v12H5Z"/><path d="M12 2v5h4M8 11h5M8 14h5"/></svg>Paper <span class="button-detail">PDF</span><span aria-hidden="true">↗</span></a><a class="button secondary" href="#method">Explore the method <span aria-hidden="true">↓</span></a><a class="text-link" href="#resources">Code & data <span class="tiny-label">Soon</span></a></div>
+
+      <div class="world-window" aria-label="Conceptual illustration of observed and future latent states">
+        <div class="window-top"><span><span class="live-dot"></span> ONE VIDEO PREFIX. TWO TEMPORAL PERSPECTIVES.</span><span class="window-index">4D / SPACE × TIME</span></div>
+        <div class="frames">
+          <figure><img src="assets/frame-0.webp" width="896" height="504" alt="Street scene at the beginning of the observed video"><figcaption><span>OBSERVED</span><span>0.0 s</span></figcaption></figure>
+          <figure><img src="assets/frame-1.webp" width="896" height="504" alt="Same street with the black car moving through the scene"><figcaption><span>OBSERVED</span><span>1.5 s</span></figcaption></figure>
+          <figure><img src="assets/frame-2.webp" width="896" height="504" alt="The black car continues moving relative to the red brick building"><figcaption><span>OBSERVED</span><span>3.0 s</span></figcaption></figure>
+          <figure><img src="assets/frame-3.webp" width="398" height="223" alt="Last frame of the observed prefix in the paper teaser"><figcaption><span>OBSERVED</span><span>4.5 s</span></figcaption></figure>
+        </div>
+        <div class="latent-timeline"><div class="latent-half observed-half"><div class="latent-label"><span class="mini-dot"></span> Latent observed states <span class="timeline-direction">→</span></div><div class="state-blocks" aria-hidden="true"><i></i><i></i><i></i><i></i><span>…</span><i></i><i></i><i></i><i></i></div><p>Recall & understand</p></div><div class="time-boundary"><span>Observation<br>boundary</span><i></i></div><div class="latent-half future-half"><div class="latent-label"><span class="mini-dot"></span> Latent future states <span class="timeline-direction">→</span></div><div class="state-blocks future-blocks" aria-hidden="true"><i></i><i></i><i></i><i></i><span>…</span><i></i><i></i><i></i><i></i></div><p>Roll forward & predict</p></div></div>
+        <div class="window-bottom"><span>Observed video → evolving latent states → grounded answers</span><span class="schematic-label">Conceptual state visualization</span></div>
+      </div>
+      <p class="hero-caption">A shared internal state connects visible motion to scene evolution beyond the observation boundary.</p>
+    </section>
+
+    <section class="intro-section wrap section" id="idea">
+      <div class="section-label"><span>01 / THE IDEA</span><span class="section-line"></span></div>
+      <div class="intro-grid"><h2>The world keeps moving.<br><span class="muted">Reasoning should, too.</span></h2><div class="intro-copy"><p>Video understanding tells us what happened. Acting in a dynamic world also requires anticipating what happens next.</p><p>Pros4D brings both capabilities into one vision-language model. It compresses observed dynamics into <strong class="observed-text">latent observed states</strong>, then autoregressively evolves them into <strong class="future-text">latent future states</strong>—preserving spatial structure while reasoning across time.</p><p class="small-note">At inference, both tasks use only the same observed video prefix. No external geometric tool calls are needed during question answering.</p></div></div>
+      <details class="abstract"><summary>Read the full abstract <span aria-hidden="true">+</span></summary><div class="abstract-body"><p>Dynamic spatial reasoning from monocular video enables vision-language models (VLMs) to understand how 3D environments evolve over time, supporting physical world understanding and embodied intelligence. Existing efforts primarily address observed-dynamics understanding, whereas agents in dynamic environments also require future-dynamics prediction beyond the observation boundary. Moreover, external geometric processing and textual descriptions can increase inference complexity or lose information when representing continuous dynamics. These limitations motivate a shared internal state that preserves observed dynamics and remains predictive beyond the input video. Accordingly, we present <strong>Pros4D</strong>, a framework for modeling evolving 4D worlds in latent space that unifies retrospective understanding of observed-dynamics with prospective reasoning for future-dynamics prediction. Specifically, <strong>Pros4D-Engine</strong> derives geometry-grounded supervision and constructs paired examples for both tasks, while <strong>Pros4D-Bench</strong> evaluates them across eight spatial task categories spanning dynamic cameras, objects, and scenes. At the model level, <strong>Pros4D</strong> compresses observed dynamics into latent observed states and autoregressively rolls them forward into latent future states. <strong>4D Latent Alignment (4DLA)</strong> grounds these states through complementary visual-semantic and geometric supervision, while joint language supervision connects them to task reasoning. Experiments across benchmarks show consistent improvements over strong baselines in both capabilities.</p></div></details>
+      <div class="facts-row"><div><strong>40K</strong><span>training examples</span></div><div><strong>3,000</strong><span>benchmark questions</span></div><div><strong>8</strong><span>spatial task categories</span></div><div><strong>2</strong><span>temporal perspectives</span></div></div>
+    </section>
+
+    <section class="method-section section" id="method"><div class="wrap">
+      <div class="section-label"><span>02 / THE METHOD</span><span class="section-line"></span><span>4D-LSR + 4DLA</span></div>
+      <div class="section-heading"><h2>A latent world.<br>Two ways to reason.</h2><p>Textual reasoning and continuous latent states work together, connecting visual evidence, spatial structure, and temporal evolution.</p></div>
+      <div class="method-steps"><article><span class="step-no">01</span><h3>Encode the observed world</h3><p>Compress entity-specific visual and motion evidence into ordered latent observed states.</p><span class="step-tag observed-tag">Observed dynamics</span></article><article><span class="step-no">02</span><h3>Evolve beyond observation</h3><p>Autoregressively roll observed states forward to model the future continuation in latent space.</p><span class="step-tag future-tag">Future dynamics</span></article><article><span class="step-no">03</span><h3>Ground the reasoning</h3><p>Align states with visual-semantic and geometric targets, alongside joint language supervision.</p><span class="step-tag neutral-tag">Training-time alignment</span></article></div>
+      <figure class="paper-figure"><button class="figure-zoom" data-zoom="assets/alignment.webp" data-caption="4D Latent Alignment (4DLA). Visual-semantic and geometric supervision are used only during training." aria-label="Enlarge the 4D Latent Alignment diagram"><img src="assets/alignment.webp" width="2400" height="978" alt="4DLA architecture: a VLM interleaves visual, text, observed latent and future latent tokens; frozen visual and geometry encoders supervise the trainable decoder and alignment head" loading="lazy"><span class="zoom-label" aria-hidden="true">↗ View figure</span></button><figcaption><span class="figure-number">FIG. 01</span><span><strong>4D Latent Alignment.</strong> Complementary visual-semantic and geometric supervision ground the evolving states. Alignment is active only during training; both encoders remain frozen.</span></figcaption></figure>
+      <div class="method-footnote"><span class="inline-symbol" aria-hidden="true">↳</span><p><strong>Geometry at training. Latent reasoning at inference.</strong><br>The model answers from the observed video and question, without access to future frames or an external geometry pipeline.</p><a class="text-link" href="downloads/Pros4D.pdf#page=4" target="_blank" rel="noopener">Technical details <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="engine-section wrap section" id="engine">
+      <div class="section-label"><span>03 / THE DATA ENGINE</span><span class="section-line"></span></div>
+      <div class="section-heading"><h2>From video to<br><span class="muted">geometry-grounded supervision.</span></h2><p>Pros4D-Engine constructs paired examples for understanding and prediction. Geometry determines the answer before the language model verbalizes it.</p></div>
+      <ol class="engine-flow"><li><span>01</span> Ground & track entities</li><li><span>02</span> Recover 3D geometry</li><li><span>03</span> Derive temporal labels</li><li><span>04</span> Synthesize state traces</li></ol>
+      <figure class="paper-figure"><button class="figure-zoom" data-zoom="assets/data-engine.webp" data-caption="Pros4D-Engine: entity-centric video grounding, estimated geometry, paired temporal QA, and 4D-LSR trace construction." aria-label="Enlarge the Pros4D-Engine diagram"><img src="assets/data-engine.webp" width="2400" height="1126" alt="Pros4D-Engine pipeline for tracking entities, recovering geometry, constructing spatial questions, and generating interleaved text and latent state traces" loading="lazy"><span class="zoom-label" aria-hidden="true">↗ View figure</span></button><figcaption><span class="figure-number">FIG. 02</span><span><strong>Pros4D-Engine.</strong> Entity tracking and estimated 3D geometry provide spatial supervision. Verified labels and ordered state targets form the Pros4D-40K training set.</span></figcaption></figure>
+    </section>
+
+    <section class="benchmark-section section" id="benchmark"><div class="wrap">
+      <div class="section-label"><span>04 / PROS4D-BENCH</span><span class="section-line"></span></div>
+      <div class="benchmark-intro"><div><h2>Same observation.<br><span class="muted">A broader test of understanding.</span></h2><p>Eight spatial categories span cameras, objects, and scenes. Both temporal tasks receive an identical observed prefix, with videos separated from training by video identifier.</p></div><div class="benchmark-total"><strong>3,000</strong><span>questions · 2,496 videos</span><div class="distribution-bar" aria-label="1,891 observed questions and 1,109 future questions"><span></span><span></span></div><div class="distribution-legend"><span><i></i> 1,891 observed</span><span><i></i> 1,109 future</span></div></div></div>
+      <div class="task-grid">
+        <article><span class="task-family">CAMERA / 01</span><h3>Camera Motion Direction</h3><p>How does the observer move?</p><span class="question-count">606 questions</span></article>
+        <article><span class="task-family">CAMERA / 02</span><h3>Camera–Object Distance</h3><p>Is the camera getting closer?</p><span class="question-count">335 questions</span></article>
+        <article><span class="task-family">OBJECT / 03</span><h3>Object Motion Direction</h3><p>Which way does the target move?</p><span class="question-count">469 questions</span></article>
+        <article><span class="task-family">OBJECT / 04</span><h3>Inter-Object Distance</h3><p>How does their separation change?</p><span class="question-count">155 questions</span></article>
+        <article><span class="task-family">OBJECT / 05</span><h3>Object Speed Change</h3><p>Does the target speed up or slow down?</p><span class="question-count">463 questions</span></article>
+        <article><span class="task-family">OBJECT / 06</span><h3>Object Travel Distance</h3><p>What is the target’s endpoint displacement?</p><span class="question-count">472 questions</span></article>
+        <article><span class="task-family">SCENE / 07</span><h3>Scene Spatial Relationship</h3><p>How does an object move relative to a landmark?</p><span class="question-count">248 questions</span></article>
+        <article><span class="task-family">SCENE / 08</span><h3>Scene Object Trajectory</h3><p>Which direction does the main object travel?</p><span class="question-count">252 questions</span></article>
+      </div>
+      <details class="distribution-details"><summary>Explore the benchmark distribution <span aria-hidden="true">+</span></summary><div class="distribution-detail-grid"><img src="assets/benchmark-statistics.webp" width="1800" height="1042" alt="Paper figure showing the distribution of Pros4D-Bench questions across eight spatial categories" loading="lazy"><div class="table-scroll"><table><caption>Questions by spatial and temporal task</caption><thead><tr><th scope="col">Spatial task</th><th scope="col">Observed</th><th scope="col">Future</th></tr></thead><tbody><tr><th scope="row">Camera Motion Direction</th><td>503</td><td>103</td></tr><tr><th scope="row">Camera–Object Distance</th><td>200</td><td>135</td></tr><tr><th scope="row">Object Motion Direction</th><td>279</td><td>190</td></tr><tr><th scope="row">Inter-Object Distance</th><td>105</td><td>50</td></tr><tr><th scope="row">Object Speed Change</th><td>275</td><td>188</td></tr><tr><th scope="row">Object Travel Distance</th><td>279</td><td>193</td></tr><tr><th scope="row">Scene Spatial Relationship</th><td>122</td><td>126</td></tr><tr><th scope="row">Scene Object Trajectory</th><td>128</td><td>124</td></tr></tbody><tfoot><tr><th scope="row">Total</th><td>1,891</td><td>1,109</td></tr></tfoot></table></div></div></details>
+    </div></section>
+
+    <section class="results-section wrap section" id="results">
+      <div class="section-label"><span>05 / RESULTS</span><span class="section-line"></span><span>ACCURACY (%) ↑</span></div>
+      <div class="section-heading"><h2>Better understanding.<br><span class="muted">Stronger anticipation.</span></h2><p>Consistent gains in both temporal tasks, with transfer to dynamic spatial benchmarks, robot manipulation, and driving scenes.</p></div>
+      <div class="results-dashboard"><div class="dashboard-top"><div><h3>Across the observation boundary</h3><p>Pros4D-Bench · comparison with the corresponding backbone</p></div><div class="model-switch" role="group" aria-label="Select model scale"><button type="button" data-scale="3b" aria-pressed="false">3B</button><button type="button" data-scale="8b" aria-pressed="true">8B</button></div></div>
+        <div class="chart-grid" aria-live="polite" aria-atomic="true"><article class="result-chart"><div class="chart-heading"><h4>Observed-dynamics understanding</h4><strong id="observed-gain">+15.2<span> pts</span></strong></div><div class="bar-row"><span data-backbone-name>Qwen3-VL-8B</span><div class="bar-track"><div class="bar baseline-bar" id="observed-base-bar" style="--value:49.7%"></div></div><b id="observed-base">49.7</b></div><div class="bar-row"><span data-model-name>Pros4D-8B</span><div class="bar-track"><div class="bar observed-bar" id="observed-ours-bar" style="--value:64.9%"></div></div><b id="observed-ours">64.9</b></div></article><article class="result-chart"><div class="chart-heading"><h4>Future-dynamics prediction</h4><strong id="future-gain">+18.8<span> pts</span></strong></div><div class="bar-row"><span data-backbone-name>Qwen3-VL-8B</span><div class="bar-track"><div class="bar baseline-bar" id="future-base-bar" style="--value:40.7%"></div></div><b id="future-base">40.7</b></div><div class="bar-row"><span data-model-name>Pros4D-8B</span><div class="bar-track"><div class="bar future-bar" id="future-ours-bar" style="--value:59.5%"></div></div><b id="future-ours">59.5</b></div></article></div>
+        <div class="dashboard-bottom"><span>Overall Pros4D-Bench accuracy</span><strong id="overall-score">62.9%</strong><span class="dashboard-note">Same observed prefix for both tasks</span></div>
+      </div>
+      <div class="table-heading"><h3>Selected comparisons on Pros4D-Bench</h3><span>Reported in the paper · accuracy (%)</span></div>
+      <div class="table-scroll result-table"><table><thead><tr><th scope="col">Model</th><th scope="col">Overall</th><th scope="col">Observed</th><th scope="col">Future</th></tr></thead><tbody><tr><th scope="row">MLLM-4D-8B</th><td>51.7</td><td>59.3</td><td>38.7</td></tr><tr><th scope="row">DynTrace</th><td>54.6</td><td>57.5</td><td>49.6</td></tr><tr class="baseline-row"><th scope="row">Qwen2.5-VL-3B <span>backbone</span></th><td>45.4</td><td>50.9</td><td>36.0</td></tr><tr class="ours-row"><th scope="row">Pros4D-3B</th><td>62.0</td><td>63.9</td><td>58.8</td></tr><tr class="baseline-row"><th scope="row">Qwen3-VL-8B <span>backbone</span></th><td>46.4</td><td>49.7</td><td>40.7</td></tr><tr class="ours-row"><th scope="row">Pros4D-8B</th><td><strong>62.9</strong></td><td><strong>64.9</strong></td><td><strong>59.5</strong></td></tr></tbody></table></div>
+      <div class="transfer-grid"><article><span>DYN-BENCH · 8B</span><strong>65.6<small>%</small></strong><p><b>+4.6 pts</b> over the backbone</p></article><article><span>VLM4D · 8B</span><strong>68.2<small>%</small></strong><p><b>+9.2 pts</b> over the backbone</p></article><article><span>OPENX-VQA · 3B</span><strong>51.39<small>%</small></strong><p><b>+20.91 pts</b> over the backbone</p></article></div>
+      <p class="small-note results-note">All values are from the accompanying manuscript. Gains are percentage points over the corresponding Qwen backbone. See the paper for the complete comparisons, evaluation protocols, and ablations.</p>
+    </section>
+
+    <section class="examples-section section" id="examples"><div class="wrap">
+      <div class="section-label"><span>06 / A CLOSER LOOK</span><span class="section-line"></span><span>PAPER EXAMPLES</span></div>
+      <div class="section-heading"><h2>Reasoning with<br><span class="muted">a world that evolves.</span></h2><p>Qualitative examples connect the queried entity to its surroundings and to the order of events.</p></div>
+      <div class="example-tabs" role="tablist" aria-label="Qualitative examples"><button id="tab-prediction" role="tab" aria-selected="true" aria-controls="panel-prediction" tabindex="0">Future scene relations <span aria-hidden="true">↗</span></button><button id="tab-observed" role="tab" aria-selected="false" aria-controls="panel-observed" tabindex="-1">Observed object motion <span aria-hidden="true">↗</span></button></div>
+      <div class="example-panel" id="panel-prediction" role="tabpanel" aria-labelledby="tab-prediction"><div class="example-context"><span class="step-tag future-tag">Prospective reasoning</span><p>How will the black car move relative to the red brick building, given the observed segment?</p></div><figure class="paper-figure"><button class="figure-zoom" data-zoom="assets/teaser.webp" data-caption="Paper teaser: future scene relationship reasoning. The figure includes the source video's continuation for illustration; future frames are not provided to the model at inference." aria-label="Enlarge the future scene relationship example"><img src="assets/teaser.webp" width="2400" height="1229" alt="Pros4D teaser showing an observed street video, a question about the black car's future relation to a red brick building, and reasoning using observed and future latent states" loading="lazy"><span class="zoom-label" aria-hidden="true">↗ View figure</span></button><figcaption><span class="figure-number">FIG. 03</span><span>The paper’s motivating example. The source-video continuation is shown for illustration; future frames are not model inputs at inference.</span></figcaption></figure></div>
+      <div class="example-panel" id="panel-observed" role="tabpanel" aria-labelledby="tab-observed" hidden><div class="example-context"><span class="step-tag observed-tag">Retrospective understanding</span><p>From the camera’s perspective, which direction does the woman in a grey coat move?</p></div><figure class="paper-figure"><button class="figure-zoom" data-zoom="assets/reasoning-future.webp" data-caption="Qualitative comparison from the paper: observed object motion direction. Pros4D identifies movement to the left in the camera view." aria-label="Enlarge the observed object motion example"><img src="assets/reasoning-future.webp" width="2000" height="1460" alt="Paper comparison showing Pros4D correctly identifying the woman in a grey coat moving left, with text and ordered latent observed states" loading="lazy"><span class="zoom-label" aria-hidden="true">↗ View figure</span></button><figcaption><span class="figure-number">FIG. 04</span><span>Entity-specific latent states preserve the motion evidence needed to identify direction in the camera view.</span></figcaption></figure></div>
+    </div></section>
+
+    <section class="resources-section wrap section" id="resources"><div class="section-label"><span>07 / RESOURCES</span><span class="section-line"></span></div><div class="resource-heading"><h2>Explore Pros4D.</h2><p>The paper is available below.<br>Further research resources will be linked here when released.</p></div><div class="resource-grid"><a href="downloads/Pros4D.pdf" target="_blank" rel="noopener" class="resource-item"><span class="resource-type">MANUSCRIPT</span><h3>Read the paper <span aria-hidden="true">↗</span></h3><p>Full paper & supplementary material</p><span class="availability available">Available · PDF</span></a><div class="resource-item"><span class="resource-type">IMPLEMENTATION</span><h3>Code & models</h3><p>Training and inference resources</p><span class="availability">Coming soon</span></div><div class="resource-item"><span class="resource-type">DATA & EVALUATION</span><h3>Pros4D-40K & Bench</h3><p>Paired supervision and evaluation data</p><span class="availability">Coming soon</span></div></div>
+      <div class="citation-heading"><h3>Citation</h3><button class="copy-button" id="copy-citation" type="button">Copy BibTeX <span aria-hidden="true">⧉</span></button><span class="sr-only" id="copy-status" role="status"></span></div><pre class="citation"><code id="bibtex">@misc{gao2026pros4d,
+  title   = {Pros4D: Modeling Evolving 4D Worlds in Latent Space
+             for Dynamic Spatial Reasoning},
+  author  = {Rongxin Gao and Dongyuan Liu and Chu Li and
+             Chengyang Ji and Jialing Huang and Chenxin Li and
+             Jingrui Ye and Haosong Zhen and Xinghao Ding and
+             Yue Huang and Yuzhi Huang and Xiaodong Tu and Jingyan Jiang},
+  year    = {2026},
+  note    = {Research manuscript},
+  url     = {https://pros4d.github.io/}
+}</code></pre><a class="citation-download" href="downloads/pros4d.bib" download>Download citation (.bib) <span aria-hidden="true">↓</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="wordmark" href="#top">Pros<span>4D</span><span class="brand-period">.</span></a><p>Modeling evolving worlds. Reasoning across time.</p><a href="https://github.com/Pros4D/pros4d.github.io" target="_blank" rel="noopener">Website source <span aria-hidden="true">↗</span></a><a href="#top" class="back-top">Back to top ↑</a></div></footer>
+  <dialog class="lightbox" id="figure-dialog" aria-labelledby="dialog-caption"><button class="dialog-close" type="button" aria-label="Close enlarged figure">Close <span aria-hidden="true">×</span></button><div class="lightbox-content"><img id="dialog-image" alt=""><p id="dialog-caption"></p></div></dialog>
+</body>
+</html>
