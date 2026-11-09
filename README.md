@@ -2,7 +2,7 @@
 
 Research homepage for **Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning**.
 
-Intended public URL: https://pros4d.github.io/
+Live website: https://pros4d.github.io/
 
 ## Preview locally
 

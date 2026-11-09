@@ -13,6 +13,6 @@
 - [x] Add model switching, figure dialog, keyboard tabs, mobile navigation, and citation copying in script.js.
 - [x] Add metadata, favicon, social image, sitemap, robots file, citation download, and maintenance README.
 - [x] Complete DOM interaction, asset, paper-number, CSS, and HTTP checks. All pass. Actual browser viewport inspection is unavailable because the browser controller stopped before obtaining a trusted page URL.
-- [ ] Create Pros4D organization, create pros4d.github.io, push the site, enable Pages, and verify the live domain.
+- [x] The user created Pros4D. Created pros4d.github.io, pushed the website, enabled HTTPS Pages from main, and verified the successful deployment and live HTTP 200 response.
 
 The browser control stopped before reaching a usable GitHub page. Do not substitute a different publication destination without the user's instruction. Complete independent local work before requesting the manual organization creation step.
