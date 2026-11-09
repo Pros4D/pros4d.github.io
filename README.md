@@ -8,7 +8,7 @@ Live website: https://pros4d.github.io/
 
 From this directory, run `python -m http.server 4173 --bind 127.0.0.1` and visit http://127.0.0.1:4173/.
 
-This is a self-contained static website with no build step or external runtime dependencies. The font and all images are hosted locally. JavaScript adds model-scale comparison, keyboard-accessible example tabs, figure enlargement, a mobile menu, and citation copying.
+This is a self-contained static website with no build step or external runtime dependencies. The font and all images are hosted locally. JavaScript adds model-scale comparison, keyboard-accessible example tabs, figure enlargement, a mobile menu, and a BibTeX dialog with citation copying.
 
 ## Publish on GitHub Pages
 
@@ -18,20 +18,20 @@ The organization must exist before repository publication. No credentials belong
 
 ## Edit content
 
-- `index.html`: authors, paper description, method, benchmark, selected results, resources, and citation.
+- `index.html`: authors, paper description, method, benchmark, selected results, and the BibTeX dialog.
 - `style.css`: visual design and responsive layouts.
 - `script.js`: interactions and 3B/8B result values.
 - `assets/`: web-optimized figures and video frames extracted from the supplied manuscript.
 - `downloads/Pros4D.pdf`: compiled from `main_arxiv.tex`, including the supplement.
 - `downloads/pros4d.bib`: the citation displayed on the page; update both together.
 
-When code, model, data, or arXiv URLs become available, replace the relevant resource statuses with real links. The site currently describes these as coming soon and makes no conference-acceptance claim. The citation is labeled as a research manuscript; replace it with the official publication record when available.
+The header resource pills follow the supplied arXiv / Code / BibTeX reference. The arXiv and Code buttons are disabled until their URLs are supplied; replace them with links retaining the `resource-pill` class when available. BibTeX opens the citation dialog. The separate Resources section has been removed. The site makes no conference-acceptance claim. The citation is labeled as a research manuscript; replace it with the official publication record when available.
 
 If the organization name changes, update the canonical URL, social metadata, structured data, citation, robots file, sitemap, and website-source link.
 
 ## Provenance
 
-Research text, author order, figures, and numbers follow the supplied paper. The hero's street frames are extracted from `figures/teaser_v7.pdf`. The state timeline is a conceptual schematic, not generated future video. Alignment and data-engine figures come from `figures/pipeline_v6.pdf` and `figures/datagen_v4.pdf`. Qualitative comparisons come from the supplementary figures.
+Research text, author order, figures, and numbers follow the supplied paper. The author block uses explicit rows of seven and six authors on desktop, with responsive wrapping on narrow screens. Per the author's correction, Jingyan Jiang and Tsinghua University use affiliation 4. The hero displays `figures/teaser_v7.pdf`. Alignment and data-engine figures come from `figures/pipeline_v6.pdf` and `figures/datagen_v4.pdf`. Fig.03 uses the appendix's camera–object distance comparison (`appfigs/pros4d_result1.pdf`); Fig.04 uses the object motion comparison (`appfigs/pros4d_result2.pdf`). Decorative page arrows are removed; original research diagrams are preserved.
 
 The website has an original layout. DynTrace's project website was a structural reference. Its code and styling were not copied.
 

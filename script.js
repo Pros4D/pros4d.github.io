@@ -74,25 +74,34 @@ tabs.forEach((tab, index) => {
 const dialog = document.getElementById('figure-dialog');
 const dialogImage = document.getElementById('dialog-image');
 const dialogCaption = document.getElementById('dialog-caption');
-let figureOpener;
+const dialogOpeners = new WeakMap();
+function openDialog(target, trigger) {
+  dialogOpeners.set(target, trigger);
+  target.showModal();
+  document.body.style.overflow = 'hidden';
+}
 document.querySelectorAll('[data-zoom]').forEach(button => {
   button.addEventListener('click', () => {
-    figureOpener = button;
     dialogImage.src = button.dataset.zoom;
     dialogImage.alt = button.querySelector('img').alt;
     dialogCaption.textContent = button.dataset.caption;
-    dialog.showModal();
-    document.body.style.overflow = 'hidden';
+    openDialog(dialog, button);
   });
 });
-document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => {
-  const rect = dialog.getBoundingClientRect();
-  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+document.querySelectorAll('dialog').forEach(target => {
+  target.querySelector('[data-close-dialog]').addEventListener('click', () => target.close());
+  target.addEventListener('click', event => {
+    const rect = target.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) target.close();
+  });
+  target.addEventListener('close', () => {
+    document.body.style.overflow = '';
+    dialogOpeners.get(target)?.focus();
+  });
 });
-dialog.addEventListener('close', () => {
-  document.body.style.overflow = '';
-  figureOpener?.focus();
+const citationDialog = document.getElementById('citation-dialog');
+document.getElementById('open-citation').addEventListener('click', event => {
+  openDialog(citationDialog, event.currentTarget);
 });
 
 const copyButton = document.getElementById('copy-citation');
