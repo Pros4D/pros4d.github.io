@@ -29,14 +29,13 @@
       <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
       <nav id="navigation" aria-label="Main navigation">
         <a href="#idea">Overview</a><a href="#method">Method</a><a href="#benchmark">Benchmark</a><a href="#results">Results</a>
-        <a class="nav-paper" href="downloads/Pros4D.pdf" target="_blank" rel="noopener">Read the paper</a>
+        <a href="#examples">Examples</a><button class="nav-citation" type="button" data-open-citation aria-haspopup="dialog" aria-controls="citation-dialog">BibTeX</button>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero wrap" id="top">
-      <div class="eyebrow"><span class="status-dot"></span> DYNAMIC SPATIAL REASONING <span class="eyebrow-line"></span> RESEARCH PROJECT</div>
       <h1><span class="title-line"><span class="title-brand">Pros4D.</span> Modeling Evolving 4D Worlds in Latent Space for</span><span class="title-line title-subject">Dynamic Spatial Reasoning</span></h1>
       <p class="hero-summary">Understand what has happened.<br class="mobile-break"> Reason about what comes next.</p>
       <div class="authors" aria-label="Paper authors">
@@ -47,7 +46,7 @@
       <div class="hero-actions" aria-label="Research resources">
         <button class="resource-pill" type="button" disabled title="arXiv link coming soon" aria-label="arXiv — link coming soon"><svg class="arxiv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 3 12 18M6 21l5-7m2-4 5-7M8 3l10 15M6 7l10 14"/></svg><span>arXiv</span></button>
         <button class="resource-pill" type="button" disabled title="Code link coming soon" aria-label="Code — link coming soon"><svg class="code-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 6-5 6 5 6m10-12 5 6-5 6M14 3l-4 18"/></svg><span>Code</span></button>
-        <button class="resource-pill" id="open-citation" type="button" aria-haspopup="dialog" aria-controls="citation-dialog"><svg class="quote-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3c0 3-1 4-3 5v2c5-1 7-4 7-9V7a2 2 0 0 0-2-2Zm13 0a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3c0 3-1 4-3 5v2c5-1 7-4 7-9V7a2 2 0 0 0-2-2Z"/></svg><span>BibTeX</span></button>
+        <button class="resource-pill" id="open-citation" type="button" data-open-citation aria-haspopup="dialog" aria-controls="citation-dialog"><svg class="quote-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3c0 3-1 4-3 5v2c5-1 7-4 7-9V7a2 2 0 0 0-2-2Zm13 0a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3c0 3-1 4-3 5v2c5-1 7-4 7-9V7a2 2 0 0 0-2-2Z"/></svg><span>BibTeX</span></button>
       </div>
       <figure class="hero-teaser paper-figure"><button class="figure-zoom" data-zoom="assets/teaser.webp" data-caption="Pros4D: observed-dynamics understanding and future-dynamics prediction from the same observed video prefix. The source-video continuation is shown for illustration; future frames are not model inputs at inference." aria-label="Enlarge the paper teaser"><img src="assets/teaser.webp" width="2400" height="1229" alt="Paper teaser showing the observed street video, a question about future scene relationships, and reasoning through observed and future latent states" fetchpriority="high"><span class="zoom-label" aria-hidden="true">View figure</span></button></figure>
       <p class="hero-caption">A shared internal state connects visible motion to scene evolution beyond the observation boundary.</p>

@@ -100,8 +100,11 @@ document.querySelectorAll('dialog').forEach(target => {
   });
 });
 const citationDialog = document.getElementById('citation-dialog');
-document.getElementById('open-citation').addEventListener('click', event => {
-  openDialog(citationDialog, event.currentTarget);
+document.querySelectorAll('[data-open-citation]').forEach(trigger => {
+  trigger.addEventListener('click', event => {
+    closeMenu();
+    openDialog(citationDialog, event.currentTarget);
+  });
 });
 
 const copyButton = document.getElementById('copy-citation');

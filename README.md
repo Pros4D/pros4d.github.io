@@ -22,10 +22,9 @@ The organization must exist before repository publication. No credentials belong
 - `style.css`: visual design and responsive layouts.
 - `script.js`: interactions and 3B/8B result values.
 - `assets/`: web-optimized figures and video frames extracted from the supplied manuscript.
-- `downloads/Pros4D.pdf`: compiled from `main_arxiv.tex`, including the supplement.
 - `downloads/pros4d.bib`: the citation displayed on the page; update both together.
 
-The header resource pills follow the supplied arXiv / Code / BibTeX reference. The arXiv and Code buttons are disabled until their URLs are supplied; replace them with links retaining the `resource-pill` class when available. BibTeX opens the citation dialog. The separate Resources section has been removed. The site makes no conference-acceptance claim. The citation is labeled as a research manuscript; replace it with the official publication record when available.
+The navigation includes Overview, Method, Benchmark, Results, Examples, and BibTeX. Examples scrolls to the qualitative examples; both BibTeX controls open the same citation dialog. The paper is to be read through arXiv only; the local PDF download and its navigation entry have been removed. The header resource pills follow the supplied arXiv / Code / BibTeX reference. The arXiv and Code buttons are disabled until their URLs are supplied; replace them with links retaining the `resource-pill` class when available. BibTeX opens the citation dialog. The separate Resources section has been removed. The site makes no conference-acceptance claim. The citation is labeled as a research manuscript; replace it with the official publication record when available.
 
 If the organization name changes, update the canonical URL, social metadata, structured data, citation, robots file, sitemap, and website-source link.
 
