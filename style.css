@@ -7,3 +7,13 @@
 @media(max-width:1100px){.author-row{gap:10px;flex-wrap:wrap}.chart-grid{grid-template-columns:1fr}.chart-heading h4{max-width:none}}
 @media(max-width:760px){.author-notes{font-size:15px;gap:8px 18px}.author-row sup{font-size:12px}.hero-actions{gap:8px}.resource-pill{padding:9px 8px;gap:6px}.bar-row{grid-template-columns:140px 1fr 42px}.method-steps p{min-height:0}.task-grid{grid-template-columns:1fr}.task-grid h3,.task-grid p{min-height:0}.transfer-grid{grid-template-columns:1fr;gap:22px}.transfer-grid p b{display:inline}.example-tabs{gap:20px}.example-tabs button{flex:1}.citation-dialog .citation{white-space:pre-wrap;overflow-wrap:anywhere}}
 @media(forced-colors:active){.title-brand{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}}
+
+/* Center paired section introductions and keep affiliations on their own row. */
+#method .section-heading,#engine .section-heading,#results .section-heading,#examples .section-heading{align-items:center}
+#method .section-heading>p,#engine .section-heading>p,#results .section-heading>p,#examples .section-heading>p{margin-block:0}
+.hero .authors{margin-top:28px}
+.affiliations{display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;max-width:none;gap:28px;margin-top:20px}
+.affiliation{display:inline-flex;align-items:center;gap:.4em;white-space:nowrap}
+.university-logo{width:1em;height:1em;max-width:none;object-fit:contain;flex:0 0 1em}
+.affiliation>sup{align-self:center}
+@media(max-width:760px){.affiliations{flex-wrap:wrap;gap:12px 18px}.hero .authors{margin-top:24px}#method .section-heading>p,#engine .section-heading>p,#results .section-heading>p,#examples .section-heading>p{margin-top:20px}}
