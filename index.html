@@ -15,10 +15,10 @@
   <link rel="canonical" href="https://pros4d.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261110">
   <script src="script.js" defer></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning","url":"https://pros4d.github.io/","author":[{"@type":"Person","name":"Rongxin Gao"},{"@type":"Person","name":"Dongyuan Liu"},{"@type":"Person","name":"Chu Li"},{"@type":"Person","name":"Chengyang Ji"},{"@type":"Person","name":"Jialing Huang"},{"@type":"Person","name":"Chenxin Li"},{"@type":"Person","name":"Jingrui Ye"},{"@type":"Person","name":"Haosong Zhen"},{"@type":"Person","name":"Xinghao Ding"},{"@type":"Person","name":"Yue Huang"},{"@type":"Person","name":"Yuzhi Huang"},{"@type":"Person","name":"Xiaodong Tu"},{"@type":"Person","name":"Jingyan Jiang"}]}
+  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning","url":"https://pros4d.github.io/","author":[{"@type":"Person","name":"Rongxin Gao"},{"@type":"Person","name":"Dongyuan Liu"},{"@type":"Person","name":"Chu Li"},{"@type":"Person","name":"Chengyang Ji"},{"@type":"Person","name":"Jialing Huang"},{"@type":"Person","name":"Runyu Chen"},{"@type":"Person","name":"Kairun Wen"},{"@type":"Person","name":"Chenxin Li"},{"@type":"Person","name":"Jingrui Ye"},{"@type":"Person","name":"Haosong Zhen"},{"@type":"Person","name":"Xinghao Ding"},{"@type":"Person","name":"Yue Huang"},{"@type":"Person","name":"Yuzhi Huang"},{"@type":"Person","name":"Xiaodong Tu"},{"@type":"Person","name":"Jingyan Jiang"}]}
   </script>
 </head>
 <body>
@@ -39,16 +39,17 @@
       <h1><span class="title-line"><span class="title-brand">Pros4D.</span> Modeling Evolving 4D Worlds in Latent Space for</span><span class="title-line title-subject">Dynamic Spatial Reasoning</span></h1>
       <p class="hero-summary">Understand what has happened.<br class="mobile-break"> Reason about what comes next.</p>
       <div class="authors" aria-label="Paper authors">
-        <div class="author-row"><span>Rongxin Gao<sup>1</sup></span><span>Dongyuan Liu<sup>1</sup></span><span>Chu Li<sup>2</sup></span><span>Chengyang Ji<sup>2</sup></span><span>Jialing Huang<sup>1</sup></span><span>Chenxin Li<sup>3</sup></span><span>Jingrui Ye<sup>4</sup></span></div>
-        <div class="author-row"><span>Haosong Zhen<sup>5</sup></span><span>Xinghao Ding<sup>1</sup></span><span>Yue Huang<sup>1</sup></span><span>Yuzhi Huang<sup>4</sup></span><span>Xiaodong Tu<sup>1</sup></span><span>Jingyan Jiang<sup>4</sup></span></div>
+        <div class="author-row"><span>Rongxin Gao<sup>1,*</sup></span><span>Dongyuan Liu<sup>1</sup></span><span>Chu Li<sup>2</sup></span><span>Chengyang Ji<sup>2</sup></span><span>Jialing Huang<sup>1</sup></span><span>Runyu Chen<sup>1</sup></span><span>Kairun Wen<sup>3</sup></span></div>
+        <div class="author-row"><span>Chenxin Li<sup>3</sup></span><span>Jingrui Ye<sup>4</sup></span><span>Haosong Zhen<sup>5</sup></span><span>Xinghao Ding<sup>1,†</sup></span><span>Yue Huang<sup>1</sup></span><span>Yuzhi Huang<sup>4,†</sup></span><span>Xiaodong Tu<sup>1</sup></span><span>Jingyan Jiang<sup>4</sup></span></div>
       </div>
       <div class="affiliations"><span><sup>1</sup> Xiamen University</span><span><sup>2</sup> China University of Mining and Technology</span><span><sup>3</sup> The Chinese University of Hong Kong</span><span><sup>4</sup> Tsinghua University</span><span><sup>5</sup> Harbin Institute of Technology</span></div>
+      <div class="author-notes"><span><sup>*</sup> Project Lead</span><span><sup>†</sup> Corresponding Authors</span></div>
       <div class="hero-actions" aria-label="Research resources">
         <button class="resource-pill" type="button" disabled title="arXiv link coming soon" aria-label="arXiv — link coming soon"><svg class="arxiv-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 3 12 18M6 21l5-7m2-4 5-7M8 3l10 15M6 7l10 14"/></svg><span>arXiv</span></button>
         <button class="resource-pill" type="button" disabled title="Code link coming soon" aria-label="Code — link coming soon"><svg class="code-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 6-5 6 5 6m10-12 5 6-5 6M14 3l-4 18"/></svg><span>Code</span></button>
         <button class="resource-pill" id="open-citation" type="button" data-open-citation aria-haspopup="dialog" aria-controls="citation-dialog"><svg class="quote-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3c0 3-1 4-3 5v2c5-1 7-4 7-9V7a2 2 0 0 0-2-2Zm13 0a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3c0 3-1 4-3 5v2c5-1 7-4 7-9V7a2 2 0 0 0-2-2Z"/></svg><span>BibTeX</span></button>
       </div>
-      <figure class="hero-teaser paper-figure"><button class="figure-zoom" data-zoom="assets/teaser.webp" data-caption="Pros4D: observed-dynamics understanding and future-dynamics prediction from the same observed video prefix. The source-video continuation is shown for illustration; future frames are not model inputs at inference." aria-label="Enlarge the paper teaser"><img src="assets/teaser.webp" width="2400" height="1229" alt="Paper teaser showing the observed street video, a question about future scene relationships, and reasoning through observed and future latent states" fetchpriority="high"><span class="zoom-label" aria-hidden="true">View figure</span></button></figure>
+      <figure class="hero-teaser paper-figure"><button class="figure-zoom" data-zoom="assets/teaser.webp?v=20261110" data-caption="Pros4D: observed-dynamics understanding and future-dynamics prediction from the same observed video prefix. The source-video continuation is shown for illustration; future frames are not model inputs at inference." aria-label="Enlarge the paper teaser"><img src="assets/teaser.webp?v=20261110" width="2600" height="1331" alt="Paper teaser showing the observed street video, a question about future scene relationships, and reasoning through observed and future latent states" fetchpriority="high"><span class="zoom-label" aria-hidden="true">View figure</span></button></figure>
       <p class="hero-caption">A shared internal state connects visible motion to scene evolution beyond the observation boundary.</p>
     </section>
 
@@ -118,9 +119,10 @@
   title   = {Pros4D: Modeling Evolving 4D Worlds in Latent Space
              for Dynamic Spatial Reasoning},
   author  = {Rongxin Gao and Dongyuan Liu and Chu Li and
-             Chengyang Ji and Jialing Huang and Chenxin Li and
-             Jingrui Ye and Haosong Zhen and Xinghao Ding and
-             Yue Huang and Yuzhi Huang and Xiaodong Tu and Jingyan Jiang},
+             Chengyang Ji and Jialing Huang and Runyu Chen and
+             Kairun Wen and Chenxin Li and Jingrui Ye and
+             Haosong Zhen and Xinghao Ding and Yue Huang and
+             Yuzhi Huang and Xiaodong Tu and Jingyan Jiang},
   year    = {2026},
   note    = {Research manuscript},
   url     = {https://pros4d.github.io/}
