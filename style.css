@@ -17,3 +17,10 @@
 .university-logo{width:1em;height:1em;max-width:none;object-fit:contain;flex:0 0 1em}
 .affiliation>sup{align-self:center}
 @media(max-width:760px){.affiliations{flex-wrap:wrap;gap:12px 18px}.hero .authors{margin-top:24px}#method .section-heading>p,#engine .section-heading>p,#results .section-heading>p,#examples .section-heading>p{margin-top:20px}}
+
+/* Keep institution text and 1em emblems equal to the author-name size. */
+.hero{--author-font-size:19.5px}
+.hero .authors,.hero .affiliations{font-size:var(--author-font-size)}
+@media(max-width:1100px){.hero{--author-font-size:18px}}
+@media(max-width:760px){.hero{--author-font-size:16.5px}}
+@media(max-width:380px){.hero{--author-font-size:15px}}
