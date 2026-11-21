@@ -71,23 +71,12 @@ tabs.forEach((tab, index) => {
   });
 });
 
-const dialog = document.getElementById('figure-dialog');
-const dialogImage = document.getElementById('dialog-image');
-const dialogCaption = document.getElementById('dialog-caption');
 const dialogOpeners = new WeakMap();
 function openDialog(target, trigger) {
   dialogOpeners.set(target, trigger);
   target.showModal();
   document.body.style.overflow = 'hidden';
 }
-document.querySelectorAll('[data-zoom]').forEach(button => {
-  button.addEventListener('click', () => {
-    dialogImage.src = button.dataset.zoom;
-    dialogImage.alt = button.querySelector('img').alt;
-    dialogCaption.textContent = button.dataset.caption;
-    openDialog(dialog, button);
-  });
-});
 document.querySelectorAll('dialog').forEach(target => {
   target.querySelector('[data-close-dialog]').addEventListener('click', () => target.close());
   target.addEventListener('click', event => {
@@ -154,3 +143,22 @@ if ('IntersectionObserver' in window) {
     if (target) observer.observe(target);
   });
 }
+
+const taskDialog = document.getElementById('task-dialog');
+let exampleData;
+document.querySelectorAll('[data-example]').forEach(button => {
+  button.addEventListener('click', async () => {
+    try {
+      exampleData ||= fetch('examples.json?v=20261121').then(response => { if (!response.ok) throw new Error('Unavailable'); return response.json(); }).catch(error => { exampleData = null; throw error; });
+      const examples = await exampleData;
+      const sample = examples.find(item => item.id === button.dataset.example);
+      document.getElementById('task-title').textContent = button.querySelector('h3').textContent;
+      document.getElementById('task-interval').textContent = `${sample.type === 'future' ? 'Future prediction' : 'Observed understanding'} · shown video: 0–${sample.observationEnd.toFixed(1)} s`;
+      const video = document.getElementById('task-video');
+      video.src = sample.video; video.poster = sample.poster;
+      document.getElementById('task-question').textContent = sample.question;
+      openDialog(taskDialog, button);
+    } catch { button.querySelector('.sample-hint').textContent = 'Unable to load. Click to retry.'; }
+  });
+});
+taskDialog.addEventListener('close', () => { const video = document.getElementById('task-video'); video.pause(); video.removeAttribute('src'); video.load(); });

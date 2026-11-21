@@ -1,0 +1,82 @@
+[
+  {
+    "id": "task-01",
+    "task": "camera_motion_direction",
+    "type": "past",
+    "question": "What is the camera movement from 0.0s to 3.7s?\nA. Move Forward\nB. Move Up\nC. Move Right\nD. Move Left",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-01.mp4",
+    "poster": "assets/examples/task-01.jpg",
+    "sourceTaskId": "60d976a1-1782-520a-9317-db261b34cac3|camera_motion_direction|past"
+  },
+  {
+    "id": "task-02",
+    "task": "camera_object_distance",
+    "type": "future",
+    "question": "Based on the video segment from 0.0s to 3.7s, how will the relative distance between the camera and the white car driving on the road change in the future?\nA. Maintaining a Stable Distance\nB. Moving Away from the Camera\nC. First Moving Away Then Getting Closer\nD. Getting Closer to the Camera",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-02.mp4",
+    "poster": "assets/examples/task-02.jpg",
+    "sourceTaskId": "cbd312f4-b97f-5bab-b87d-aded9304f14c|dyn_obj2|camera_object_distance|future"
+  },
+  {
+    "id": "task-03",
+    "task": "object_motion_direction",
+    "type": "future",
+    "question": "Based on the video segment from 0.0s to 3.7s, in which direction will the black SUV driving on the road likely move from the camera's perspective?\nA. Move Down-Left\nB. Move Down-Right\nC. Nearly Stationary\nD. Move Right",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-03.mp4",
+    "poster": "assets/examples/task-03.jpg",
+    "sourceTaskId": "7c00153b-dbea-5f84-962c-fa0f74449146|dyn_obj1|object_motion_direction|future"
+  },
+  {
+    "id": "task-04",
+    "task": "object_relative_distance",
+    "type": "past",
+    "question": "How does the relative distance between the person in a black coat and the woman in a beige coat change from 0.0s to 3.7s?\nA. Getting Closer\nB. Remaining Stable\nC. First Moving Away Then Getting Closer\nD. Moving Away",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-04.mp4",
+    "poster": "assets/examples/task-04.jpg",
+    "sourceTaskId": "7b9d5995-84d0-567c-bb58-f2aecde45c04|dyn_obj1_dyn_obj2|object_relative_distance|past"
+  },
+  {
+    "id": "task-05",
+    "task": "object_motion_speed",
+    "type": "past",
+    "question": "How does the speed of the person in a black coat change from 0.0s to 3.7s?\nA. First Slowing Down Then Speeding Up\nB. First Speeding Up Then Slowing Down\nC. Maintaining a Constant Speed\nD. Slowing Down",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-05.mp4",
+    "poster": "assets/examples/task-05.jpg",
+    "sourceTaskId": "b04aca9b-8720-5000-8f34-864cf214d55c|dyn_obj1|object_motion_speed|past"
+  },
+  {
+    "id": "task-06",
+    "task": "object_motion_distance",
+    "type": "future",
+    "question": "Given that the woman in a pink hoodie moved a certain distance between 0.0s and 3.7s, how much distance will she move in the future?\nA. 0.9 meters\nB. 0.4 meters\nC. 0.8 meters\nD. 0.6 meters",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-06.mp4",
+    "poster": "assets/examples/task-06.jpg",
+    "sourceTaskId": "c85fafda-21a6-5c30-aa2c-1eea8ba3c82d|dyn_obj1|object_motion_distance|future"
+  },
+  {
+    "id": "task-07",
+    "task": "scene_spatial_relationship",
+    "type": "future",
+    "question": "In the aerial view of the river winding through the green forest, how does the distance between the small boat and the forest change over the segment from 0.0s to 3.7s?\nA. First getting closer then moving away from the green forest\nB. First moving away then getting closer to the green forest\nC. Getting closer to the green forest\nD. Remaining stable relative to the green forest",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-07.mp4",
+    "poster": "assets/examples/task-07.jpg",
+    "sourceTaskId": "4f69bbf4-e929-5fc5-acc9-767e893d7c67|scene_spatial_relationship|future"
+  },
+  {
+    "id": "task-08",
+    "task": "scene_trajectory",
+    "type": "future",
+    "question": "In the rainy street scene observed from 0.0s to 3.7s, how is the white sedan likely to continue moving through the intersection?\nA. Staying roughly in place within the scene\nB. From the lower-left area toward the upper-right area\nC. From the upper-right area toward the lower-left area\nD. From the upper-left area toward the lower-right area",
+    "observationEnd": 3.7,
+    "video": "assets/examples/task-08.mp4",
+    "poster": "assets/examples/task-08.jpg",
+    "sourceTaskId": "5417b8a1-a7ee-50a6-b2a3-8146e8236ea3|scene_trajectory|future"
+  }
+]

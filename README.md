@@ -8,7 +8,7 @@ Live website: https://pros4d.github.io/
 
 From this directory, run `python -m http.server 4173 --bind 127.0.0.1` and visit http://127.0.0.1:4173/.
 
-This is a self-contained static website with no build step or external runtime dependencies. The font and all images are hosted locally. JavaScript adds model-scale comparison, keyboard-accessible example tabs, figure enlargement, a mobile menu, and a BibTeX dialog with citation copying.
+This is a self-contained static website with no build step or external runtime dependencies. The font and all images are hosted locally. JavaScript adds model-scale comparison, keyboard-accessible example tabs, a mobile menu, and a BibTeX dialog with citation copying.
 
 ## Publish on GitHub Pages
 
@@ -24,7 +24,7 @@ The organization must exist before repository publication. No credentials belong
 - `assets/`: web-optimized figures and video frames extracted from the supplied manuscript.
 - `downloads/pros4d.bib`: the citation displayed on the page; update both together.
 
-The navigation includes Overview, Method, Benchmark, Results, Examples, and BibTeX. Examples scrolls to the qualitative examples; both BibTeX controls open the same citation dialog. The paper is to be read through arXiv only; the local PDF download and its navigation entry have been removed. The header resource pills follow the supplied arXiv / Code / BibTeX reference. The arXiv button links to https://arxiv.org/abs/2611.19803. The Code button remains disabled until its URL is supplied. BibTeX opens the citation dialog. The separate Resources section has been removed. The site makes no conference-acceptance claim. The citation includes the arXiv identifier 2611.19803 and the corrected author names Dongxuan Liu and Xiaotong Tu.
+The navigation includes Overview, Method, Benchmark, Results, Examples, and BibTeX. Examples scrolls to the qualitative examples; both BibTeX controls open the same citation dialog. The paper is to be read through arXiv only; the local PDF download and its navigation entry have been removed. The header resource pills follow the supplied arXiv / Code / BibTeX reference. The arXiv button links to https://arxiv.org/abs/2611.19803. The Code button links to https://github.com/Pros4D/Pros4D.git. BibTeX opens the citation dialog. The separate Resources section has been removed. The site makes no conference-acceptance claim. The citation includes the arXiv identifier 2611.19803 and the corrected author names Dongxuan Liu and Xiaotong Tu.
 
 If the organization name changes, update the canonical URL, social metadata, structured data, citation, robots file, sitemap, and website-source link.
 
@@ -37,3 +37,5 @@ The website has an original layout. DynTrace's project website was a structural 
 Manrope and Orbitron are distributed under the SIL Open Font License in `assets/fonts/OFL.txt` and `assets/fonts/Orbitron-OFL.txt`. Paper and figure rights remain with their respective authors and rights holders; no new license is assigned to the research material here.
 
 University affiliations use the supplied SVG emblems at 1em beside XMU, CUMT, CUHK, THU, and HIT on one desktop row. The method, engine, results, and example section heading pairs are vertically centered. The former hero summary sentence is removed.
+
+2026-11-21: Paper figures are static. Eight task buttons open a video/question dialog backed by examples.json. Videos were re-encoded from the supplied server dataset with a hard 0–3.7s cutoff; no future continuation is hosted. The results table contains all 23 manuscript methods and 11 metrics. STRIDE-QA-Bench reports the mean t0–t3 LSR gain (3.6675 percentage points, displayed as 3.67). Code links to https://github.com/Pros4D/Pros4D.git.
