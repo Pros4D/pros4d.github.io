@@ -149,7 +149,7 @@ let exampleData;
 document.querySelectorAll('[data-example]').forEach(button => {
   button.addEventListener('click', async () => {
     try {
-      exampleData ||= fetch('examples.json?v=20261121').then(response => { if (!response.ok) throw new Error('Unavailable'); return response.json(); }).catch(error => { exampleData = null; throw error; });
+      exampleData ||= fetch('examples.json?v=20261121-types2').then(response => { if (!response.ok) throw new Error('Unavailable'); return response.json(); }).catch(error => { exampleData = null; throw error; });
       const examples = await exampleData;
       const sample = examples.find(item => item.id === button.dataset.example);
       document.getElementById('task-title').textContent = button.querySelector('h3').textContent;

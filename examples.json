@@ -42,22 +42,22 @@
   {
     "id": "task-05",
     "task": "object_motion_speed",
-    "type": "past",
-    "question": "How does the speed of the person in a black coat change from 0.0s to 3.7s?\nA. First Slowing Down Then Speeding Up\nB. First Speeding Up Then Slowing Down\nC. Maintaining a Constant Speed\nD. Slowing Down",
+    "type": "future",
+    "question": "Based on the video segment from 0.0s to 3.7s, how will the speed of the person in a red shirt change in the future?\nA. Slowing Down\nB. First Speeding Up Then Slowing Down\nC. Maintaining a Constant Speed\nD. First Slowing Down Then Speeding Up",
     "observationEnd": 3.7,
-    "video": "assets/examples/task-05.mp4",
-    "poster": "assets/examples/task-05.jpg",
-    "sourceTaskId": "b04aca9b-8720-5000-8f34-864cf214d55c|dyn_obj1|object_motion_speed|past"
+    "video": "assets/examples/task-05.mp4?v=types2",
+    "poster": "assets/examples/task-05.jpg?v=types2",
+    "sourceTaskId": "cb2555a4-fee3-5e72-bf06-22a3a3bbf13c|dyn_obj1|object_motion_speed|future"
   },
   {
     "id": "task-06",
     "task": "object_motion_distance",
-    "type": "future",
-    "question": "Given that the woman in a pink hoodie moved a certain distance between 0.0s and 3.7s, how much distance will she move in the future?\nA. 0.9 meters\nB. 0.4 meters\nC. 0.8 meters\nD. 0.6 meters",
+    "type": "past",
+    "question": "How much distance did the silver car driving on the road move between 0.0s and 3.7s?\nA. 0.0 meters\nB. 0.7 meters\nC. 1.0 meters\nD. 0.3 meters",
     "observationEnd": 3.7,
-    "video": "assets/examples/task-06.mp4",
-    "poster": "assets/examples/task-06.jpg",
-    "sourceTaskId": "c85fafda-21a6-5c30-aa2c-1eea8ba3c82d|dyn_obj1|object_motion_distance|future"
+    "video": "assets/examples/task-06.mp4?v=types2",
+    "poster": "assets/examples/task-06.jpg?v=types2",
+    "sourceTaskId": "f05fd682-7465-5778-9fe7-a7c64e227ea6|dyn_obj1|object_motion_distance|past"
   },
   {
     "id": "task-07",
@@ -72,11 +72,11 @@
   {
     "id": "task-08",
     "task": "scene_trajectory",
-    "type": "future",
-    "question": "In the rainy street scene observed from 0.0s to 3.7s, how is the white sedan likely to continue moving through the intersection?\nA. Staying roughly in place within the scene\nB. From the lower-left area toward the upper-right area\nC. From the upper-right area toward the lower-left area\nD. From the upper-left area toward the lower-right area",
+    "type": "past",
+    "question": "How does the man in the light shirt move across the wooden boardwalk scene between 0.0s and 3.7s?\nA. From the upper-left area toward the lower-right area\nB. From the lower-left area toward the upper-right area\nC. From the right side of the scene toward the left side\nD. From the left side of the scene toward the right side",
     "observationEnd": 3.7,
-    "video": "assets/examples/task-08.mp4",
-    "poster": "assets/examples/task-08.jpg",
-    "sourceTaskId": "5417b8a1-a7ee-50a6-b2a3-8146e8236ea3|scene_trajectory|future"
+    "video": "assets/examples/task-08.mp4?v=types2",
+    "poster": "assets/examples/task-08.jpg?v=types2",
+    "sourceTaskId": "33843b73-a47c-5b9c-b6a2-280c61ae5868|scene_trajectory|past"
   }
 ]
