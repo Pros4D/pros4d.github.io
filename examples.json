@@ -73,7 +73,7 @@
     "id": "task-08",
     "task": "scene_trajectory",
     "type": "past",
-    "question": "How does the man in the light shirt move across the wooden boardwalk scene between 0.0s and 3.7s?\nA. From the upper-left area toward the lower-right area\nB. From the lower-left area toward the upper-right area\nC. From the right side of the scene toward the left side\nD. From the left side of the scene toward the right side",
+    "question": "How does the man in the light shirt move across the wooden boardwalk scene between 0.0s and 3.7s?\nA. From the upper area toward the lower area\nB. From the lower-left area toward the upper-right area\nC. From the right side of the scene toward the left side\nD. From the left side of the scene toward the right side",
     "observationEnd": 3.7,
     "video": "assets/examples/task-08.mp4?v=types2",
     "poster": "assets/examples/task-08.jpg?v=types2",
