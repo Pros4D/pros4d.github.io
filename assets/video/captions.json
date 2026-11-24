@@ -1,0 +1,222 @@
+[
+  {
+    "start": 0.752,
+    "end": 3.025,
+    "text": "Pros4D models evolving worlds,"
+  },
+  {
+    "start": 3.07,
+    "end": 5.829,
+    "text": "connecting what we observe to what happens next."
+  },
+  {
+    "start": 8.752,
+    "end": 10.975,
+    "text": "Watch the black car."
+  },
+  {
+    "start": 11.02,
+    "end": 15.22,
+    "text": "Its relationship with the red brick building changes over time."
+  },
+  {
+    "start": 15.265,
+    "end": 16.834,
+    "text": "From the observed clip alone,"
+  },
+  {
+    "start": 16.879,
+    "end": 20.081,
+    "text": "can a model anticipate where the car will move next?"
+  },
+  {
+    "start": 22.752,
+    "end": 27.045,
+    "text": "Most existing work explains dynamics already observed."
+  },
+  {
+    "start": 27.09,
+    "end": 28.998,
+    "text": "But agents in changing environments"
+  },
+  {
+    "start": 29.043,
+    "end": 32.175,
+    "text": "must also anticipate what comes next."
+  },
+  {
+    "start": 32.22,
+    "end": 34.988,
+    "text": "Text can lose continuous motion information,"
+  },
+  {
+    "start": 35.033,
+    "end": 38.347,
+    "text": "while external geometry adds complexity."
+  },
+  {
+    "start": 38.392,
+    "end": 40.053,
+    "text": "We introduce Pros4D:"
+  },
+  {
+    "start": 40.098,
+    "end": 43.391,
+    "text": "a data Engine, a benchmark, and a latent world model."
+  },
+  {
+    "start": 45.564,
+    "end": 48.566,
+    "text": "The Engine identifies entities, tracks their masks,"
+  },
+  {
+    "start": 48.611,
+    "end": 51.693,
+    "text": "and recovers three-dimensional geometry."
+  },
+  {
+    "start": 51.738,
+    "end": 55.131,
+    "text": "Motion and geometry determine the answers."
+  },
+  {
+    "start": 55.176,
+    "end": 58.243,
+    "text": "Next, video frames, a 4D reasoning template,"
+  },
+  {
+    "start": 58.288,
+    "end": 61.836,
+    "text": "and a question answer pair enter a vision language model."
+  },
+  {
+    "start": 61.881,
+    "end": 64.649,
+    "text": "The resulting trace recalls the observed car motion,"
+  },
+  {
+    "start": 64.694,
+    "end": 68.789,
+    "text": "imagines its continuation, and concludes: move right."
+  },
+  {
+    "start": 68.834,
+    "end": 71.763,
+    "text": "This creates forty thousand training examples."
+  },
+  {
+    "start": 73.944,
+    "end": 76.034,
+    "text": "The benchmark asks three thousand questions"
+  },
+  {
+    "start": 76.079,
+    "end": 78.482,
+    "text": "across cameras, objects, and scenes:"
+  },
+  {
+    "start": 78.527,
+    "end": 81.321,
+    "text": "eight spatial tasks, testing observed understanding"
+  },
+  {
+    "start": 81.366,
+    "end": 84.32,
+    "text": "and future prediction from the same video prefix."
+  },
+  {
+    "start": 86.508,
+    "end": 90.619,
+    "text": "Video frames and the question enter the vision language model."
+  },
+  {
+    "start": 90.664,
+    "end": 93.184,
+    "text": "Text alternates with latent observed states,"
+  },
+  {
+    "start": 93.229,
+    "end": 95.866,
+    "text": "then future states roll forward."
+  },
+  {
+    "start": 95.911,
+    "end": 97.598,
+    "text": "For 4D Latent Alignment,"
+  },
+  {
+    "start": 97.643,
+    "end": 101.7,
+    "text": "frames pass through frozen visual and geometry encoders."
+  },
+  {
+    "start": 101.745,
+    "end": 105.658,
+    "text": "Observed and future states pass through an alignment head."
+  },
+  {
+    "start": 105.703,
+    "end": 108.666,
+    "text": "Their features are aligned during training."
+  },
+  {
+    "start": 108.711,
+    "end": 112.693,
+    "text": "At inference, only the observed video and question are needed."
+  },
+  {
+    "start": 115.508,
+    "end": 117.039,
+    "text": "Watch the man in a light shirt"
+  },
+  {
+    "start": 117.084,
+    "end": 119.437,
+    "text": "and the man in a black jacket."
+  },
+  {
+    "start": 119.482,
+    "end": 121.832,
+    "text": "Pros4D recalls that they approach each other"
+  },
+  {
+    "start": 121.877,
+    "end": 124.046,
+    "text": "from opposite directions."
+  },
+  {
+    "start": 124.091,
+    "end": 127.353,
+    "text": "After they pass, they continue apart."
+  },
+  {
+    "start": 127.398,
+    "end": 129.84,
+    "text": "Their distance will increase."
+  },
+  {
+    "start": 129.885,
+    "end": 132.058,
+    "text": "The answer is: moving away."
+  },
+  {
+    "start": 136.508,
+    "end": 139.549,
+    "text": "On Pros4D-Bench, the 8B model"
+  },
+  {
+    "start": 139.594,
+    "end": 142.778,
+    "text": "improves observed understanding by 15.2 points,"
+  },
+  {
+    "start": 142.823,
+    "end": 145.491,
+    "text": "and future prediction by 18.8."
+  },
+  {
+    "start": 148.508,
+    "end": 151.397,
+    "text": "Pros4D. Reasoning beyond observation."
+  }
+]

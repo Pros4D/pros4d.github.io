@@ -1,0 +1,175 @@
+1
+00:00:00,752 --> 00:00:03,025
+Pros4D models evolving worlds,
+
+2
+00:00:03,070 --> 00:00:05,829
+connecting what we observe to what happens next.
+
+3
+00:00:08,752 --> 00:00:10,975
+Watch the black car.
+
+4
+00:00:11,020 --> 00:00:15,220
+Its relationship with the red brick building changes over time.
+
+5
+00:00:15,265 --> 00:00:16,834
+From the observed clip alone,
+
+6
+00:00:16,879 --> 00:00:20,081
+can a model anticipate where the car will move next?
+
+7
+00:00:22,752 --> 00:00:27,045
+Most existing work explains dynamics already observed.
+
+8
+00:00:27,090 --> 00:00:28,998
+But agents in changing environments
+
+9
+00:00:29,043 --> 00:00:32,175
+must also anticipate what comes next.
+
+10
+00:00:32,220 --> 00:00:34,988
+Text can lose continuous motion information,
+
+11
+00:00:35,033 --> 00:00:38,347
+while external geometry adds complexity.
+
+12
+00:00:38,392 --> 00:00:40,053
+We introduce Pros4D:
+
+13
+00:00:40,098 --> 00:00:43,391
+a data Engine, a benchmark, and a latent world model.
+
+14
+00:00:45,564 --> 00:00:48,566
+The Engine identifies entities, tracks their masks,
+
+15
+00:00:48,611 --> 00:00:51,693
+and recovers three-dimensional geometry.
+
+16
+00:00:51,738 --> 00:00:55,131
+Motion and geometry determine the answers.
+
+17
+00:00:55,176 --> 00:00:58,243
+Next, video frames, a 4D reasoning template,
+
+18
+00:00:58,288 --> 00:01:01,836
+and a question answer pair enter a vision language model.
+
+19
+00:01:01,881 --> 00:01:04,649
+The resulting trace recalls the observed car motion,
+
+20
+00:01:04,694 --> 00:01:08,789
+imagines its continuation, and concludes: move right.
+
+21
+00:01:08,834 --> 00:01:11,763
+This creates forty thousand training examples.
+
+22
+00:01:13,944 --> 00:01:16,034
+The benchmark asks three thousand questions
+
+23
+00:01:16,079 --> 00:01:18,482
+across cameras, objects, and scenes:
+
+24
+00:01:18,527 --> 00:01:21,321
+eight spatial tasks, testing observed understanding
+
+25
+00:01:21,366 --> 00:01:24,320
+and future prediction from the same video prefix.
+
+26
+00:01:26,508 --> 00:01:30,619
+Video frames and the question enter the vision language model.
+
+27
+00:01:30,664 --> 00:01:33,184
+Text alternates with latent observed states,
+
+28
+00:01:33,229 --> 00:01:35,866
+then future states roll forward.
+
+29
+00:01:35,911 --> 00:01:37,598
+For 4D Latent Alignment,
+
+30
+00:01:37,643 --> 00:01:41,700
+frames pass through frozen visual and geometry encoders.
+
+31
+00:01:41,745 --> 00:01:45,658
+Observed and future states pass through an alignment head.
+
+32
+00:01:45,703 --> 00:01:48,666
+Their features are aligned during training.
+
+33
+00:01:48,711 --> 00:01:52,693
+At inference, only the observed video and question are needed.
+
+34
+00:01:55,508 --> 00:01:57,039
+Watch the man in a light shirt
+
+35
+00:01:57,084 --> 00:01:59,437
+and the man in a black jacket.
+
+36
+00:01:59,482 --> 00:02:01,832
+Pros4D recalls that they approach each other
+
+37
+00:02:01,877 --> 00:02:04,046
+from opposite directions.
+
+38
+00:02:04,091 --> 00:02:07,353
+After they pass, they continue apart.
+
+39
+00:02:07,398 --> 00:02:09,840
+Their distance will increase.
+
+40
+00:02:09,885 --> 00:02:12,058
+The answer is: moving away.
+
+41
+00:02:16,508 --> 00:02:19,549
+On Pros4D-Bench, the 8B model
+
+42
+00:02:19,594 --> 00:02:22,778
+improves observed understanding by 15.2 points,
+
+43
+00:02:22,823 --> 00:02:25,491
+and future prediction by 18.8.
+
+44
+00:02:28,508 --> 00:02:31,397
+Pros4D. Reasoning beyond observation.

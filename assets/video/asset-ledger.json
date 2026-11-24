@@ -1,0 +1,180 @@
+{
+  "provided": {
+    "engine-frame1.png": "figures/Pros4D-DataGen -input(1).png",
+    "engine-frame2.png": "figures/Pros4D-DataGen -input(2).png",
+    "engine-frame3.png": "figures/Pros4D-DataGen -input(3).png",
+    "mask-car.png": "figures/Pros4D-DataGen -mask(4).png",
+    "mask-person.png": "figures/Pros4D-DataGen (9).png",
+    "mask-building.png": "figures/Pros4D-DataGen -mask(5).png",
+    "overlay-car.png": "figures/Pros4D-DataGen -overlay(6).png",
+    "overlay-person.png": "figures/Pros4D-DataGen -overlay(7).png",
+    "overlay-building.png": "figures/Pros4D-DataGen-overlay(8).png",
+    "pointcloud.png": "figures/Pros4D-DataGen-pointcloud.png",
+    "pipeline-input.png": "figures/Pros4D-Pipeline-input.png",
+    "case-frame1.png": "appfigs/results4-frames1.png",
+    "case-frame2.png": "appfigs/results4-frames2.png",
+    "case-frame3.png": "appfigs/results4-frames3.png",
+    "case-frame4.png": "appfigs/results4-frames4.png",
+    "case-frame5.png": "appfigs/results4-frames5.png"
+  },
+  "teaser_extracted": [
+    {
+      "file": "teaser-extract-0.png",
+      "width": 636,
+      "height": 3551
+    },
+    {
+      "file": "teaser-extract-1.png",
+      "width": 398,
+      "height": 223
+    },
+    {
+      "file": "teaser-extract-2.png",
+      "width": 896,
+      "height": 504
+    },
+    {
+      "file": "teaser-extract-3.png",
+      "width": 398,
+      "height": 223
+    },
+    {
+      "file": "teaser-extract-4.png",
+      "width": 837,
+      "height": 471
+    },
+    {
+      "file": "teaser-extract-5.png",
+      "width": 731,
+      "height": 492
+    },
+    {
+      "file": "teaser-extract-6.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "file": "teaser-extract-7.png",
+      "width": 67,
+      "height": 63
+    },
+    {
+      "file": "teaser-extract-8.png",
+      "width": 718,
+      "height": 408
+    },
+    {
+      "file": "teaser-extract-9.png",
+      "width": 728,
+      "height": 406
+    },
+    {
+      "file": "teaser-extract-10.png",
+      "width": 1742,
+      "height": 446
+    },
+    {
+      "file": "teaser-extract-11.png",
+      "width": 78,
+      "height": 76
+    },
+    {
+      "file": "teaser-extract-12.png",
+      "width": 86,
+      "height": 82
+    },
+    {
+      "file": "teaser-extract-13.png",
+      "width": 205,
+      "height": 205
+    },
+    {
+      "file": "teaser-extract-14.png",
+      "width": 79,
+      "height": 75
+    },
+    {
+      "file": "teaser-extract-15.png",
+      "width": 205,
+      "height": 205
+    },
+    {
+      "file": "teaser-extract-16.png",
+      "width": 205,
+      "height": 205
+    },
+    {
+      "file": "teaser-extract-17.png",
+      "width": 154,
+      "height": 154
+    },
+    {
+      "file": "teaser-extract-18.png",
+      "width": 205,
+      "height": 205
+    },
+    {
+      "file": "teaser-extract-19.png",
+      "width": 205,
+      "height": 205
+    },
+    {
+      "file": "teaser-extract-20.png",
+      "width": 205,
+      "height": 205
+    },
+    {
+      "file": "teaser-extract-21.png",
+      "width": 87,
+      "height": 85
+    },
+    {
+      "file": "teaser-extract-22.png",
+      "width": 896,
+      "height": 504
+    },
+    {
+      "file": "teaser-extract-23.png",
+      "width": 896,
+      "height": 504
+    },
+    {
+      "file": "teaser-extract-24.png",
+      "width": 175,
+      "height": 610
+    },
+    {
+      "file": "teaser-extract-25.png",
+      "width": 169,
+      "height": 123
+    },
+    {
+      "file": "teaser-extract-26.png",
+      "width": 169,
+      "height": 123
+    },
+    {
+      "file": "teaser-extract-27.png",
+      "width": 169,
+      "height": 123
+    }
+  ],
+  "reference": "appfigs/mind2act.mp4 (style reference only; no frames reused)",
+  "case_video": {
+    "source": "videos/video (25).mp4",
+    "input_start": 8,
+    "input_end": 11.8,
+    "presentation_speed": 0.5
+  },
+  "revision4": {
+    "cover": "Three alternating belts: reel-0.jpg through reel-7.jpg, extracted from eight supplied video clips.",
+    "overview_figures": [
+      "figures/datagen_v4.pdf",
+      "figures/statistic_v3.pdf",
+      "figures/pipeline_v6.pdf"
+    ],
+    "motivation": "sections/0_abstract.tex",
+    "trace": "figures/datagen_v4.pdf Stage 3",
+    "case": "appfigs/pros4d_result4.pdf, Pros4D output only"
+  }
+}

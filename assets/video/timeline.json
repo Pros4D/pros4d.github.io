@@ -1,0 +1,145 @@
+[
+  {
+    "id": "cover",
+    "min_duration": 8,
+    "text": "Pros four D models evolving worlds, connecting what we observe to what happens next.",
+    "phrases": [
+      "Pros four D models evolving worlds,",
+      "connecting what we observe to what happens next."
+    ],
+    "speech_duration": 5.76,
+    "start": 0,
+    "voice_start": 0.65,
+    "duration": 8
+  },
+  {
+    "id": "teaser",
+    "min_duration": 14,
+    "text": "Watch the black car. Its relationship with the red brick building changes over time. From the observed clip alone, can a model anticipate where the car will move next?",
+    "phrases": [
+      "Watch the black car.",
+      "Its relationship with the red brick building changes over time.",
+      "From the observed clip alone,",
+      "can a model anticipate where the car will move next?"
+    ],
+    "speech_duration": 12.0,
+    "start": 8,
+    "voice_start": 8.65,
+    "duration": 14
+  },
+  {
+    "id": "bridge",
+    "min_duration": 22,
+    "text": "Most existing work explains dynamics already observed. But agents in changing environments must also anticipate what comes next. Text can lose continuous motion information, while external geometry adds complexity. We introduce Pros four D: a data Engine, a benchmark, and a latent world model.",
+    "phrases": [
+      "Most existing work explains dynamics already observed.",
+      "But agents in changing environments",
+      "must also anticipate what comes next.",
+      "Text can lose continuous motion information,",
+      "while external geometry adds complexity.",
+      "We introduce Pros four D:",
+      "a data Engine, a benchmark, and a latent world model."
+    ],
+    "speech_duration": 21.312,
+    "start": 22,
+    "voice_start": 22.65,
+    "duration": 22.812
+  },
+  {
+    "id": "engine",
+    "min_duration": 28,
+    "text": "The Engine identifies entities, tracks their masks, and recovers three dimensional geometry. Motion and geometry determine the answers. Next, video frames, a four D reasoning template, and a question answer pair enter a vision language model. The resulting trace recalls the observed car motion, imagines its continuation, and concludes: move right. This creates forty thousand training examples.",
+    "phrases": [
+      "The Engine identifies entities, tracks their masks,",
+      "and recovers three dimensional geometry.",
+      "Motion and geometry determine the answers.",
+      "Next, video frames, a four D reasoning template,",
+      "and a question answer pair enter a vision language model.",
+      "The resulting trace recalls the observed car motion,",
+      "imagines its continuation, and concludes: move right.",
+      "This creates forty thousand training examples."
+    ],
+    "speech_duration": 26.88,
+    "start": 44.812,
+    "voice_start": 45.462,
+    "duration": 28.38
+  },
+  {
+    "id": "bench",
+    "min_duration": 12.414,
+    "text": "The benchmark asks three thousand questions across cameras, objects, and scenes: eight spatial tasks, testing observed understanding and future prediction from the same video prefix.",
+    "phrases": [
+      "The benchmark asks three thousand questions",
+      "across cameras, objects, and scenes:",
+      "eight spatial tasks, testing observed understanding",
+      "and future prediction from the same video prefix."
+    ],
+    "speech_duration": 11.064,
+    "start": 73.192,
+    "voice_start": 73.842,
+    "duration": 12.564
+  },
+  {
+    "id": "model",
+    "min_duration": 29,
+    "text": "Video frames and the question enter the vision language model. Text alternates with latent observed states, then future states roll forward. For four D Latent Alignment, frames pass through frozen visual and geometry encoders. Observed and future states pass through an alignment head. Their features are aligned during training. At inference, only the observed video and question are needed.",
+    "phrases": [
+      "Video frames and the question enter the vision language model.",
+      "Text alternates with latent observed states,",
+      "then future states roll forward.",
+      "For four D Latent Alignment,",
+      "frames pass through frozen visual and geometry encoders.",
+      "Observed and future states pass through an alignment head.",
+      "Their features are aligned during training.",
+      "At inference, only the observed video and question are needed."
+    ],
+    "speech_duration": 26.856,
+    "start": 85.756,
+    "voice_start": 86.406,
+    "duration": 29
+  },
+  {
+    "id": "case",
+    "min_duration": 21,
+    "text": "Watch the man in a light shirt and the man in a black jacket. Pros four D recalls that they approach each other from opposite directions. After they pass, they continue apart. Their distance will increase. The answer is: moving away.",
+    "phrases": [
+      "Watch the man in a light shirt",
+      "and the man in a black jacket.",
+      "Pros four D recalls that they approach each other",
+      "from opposite directions.",
+      "After they pass, they continue apart.",
+      "Their distance will increase.",
+      "The answer is: moving away."
+    ],
+    "speech_duration": 17.232,
+    "start": 114.756,
+    "voice_start": 115.406,
+    "duration": 21
+  },
+  {
+    "id": "results",
+    "min_duration": 12,
+    "text": "On Pros four D Bench, the eight billion parameter model improves observed understanding by fifteen point two points, and future prediction by eighteen point eight.",
+    "phrases": [
+      "On Pros four D Bench, the eight billion parameter model",
+      "improves observed understanding by fifteen point two points,",
+      "and future prediction by eighteen point eight."
+    ],
+    "speech_duration": 9.672,
+    "start": 135.756,
+    "voice_start": 136.406,
+    "duration": 12
+  },
+  {
+    "id": "closing",
+    "min_duration": 5,
+    "text": "Pros four D. Reasoning beyond observation.",
+    "phrases": [
+      "Pros four D. Reasoning beyond observation."
+    ],
+    "speech_duration": 3.576,
+    "start": 147.756,
+    "voice_start": 148.406,
+    "duration": 5.244
+  }
+]

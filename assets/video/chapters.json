@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cover",
+    "start": 0,
+    "end": 8
+  },
+  {
+    "id": "teaser",
+    "start": 8,
+    "end": 22
+  },
+  {
+    "id": "bridge",
+    "start": 22,
+    "end": 44.812
+  },
+  {
+    "id": "engine",
+    "start": 44.812,
+    "end": 73.192
+  },
+  {
+    "id": "bench",
+    "start": 73.192,
+    "end": 85.756
+  },
+  {
+    "id": "model",
+    "start": 85.756,
+    "end": 114.756
+  },
+  {
+    "id": "case",
+    "start": 114.756,
+    "end": 135.756
+  },
+  {
+    "id": "results",
+    "start": 135.756,
+    "end": 147.756
+  },
+  {
+    "id": "closing",
+    "start": 147.756,
+    "end": 153.0
+  }
+]
